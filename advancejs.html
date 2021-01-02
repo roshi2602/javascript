@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<h1>advance js modules</h1>
+<!-- color picker game for js -->
+<h1>color picker
+<span id="tar"></span>
+</h1>
+<div id='stripe'>
+	<button id='new'>new color</button>
+	<span id='mes'></span>
+</div>
+<div class="container"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<div class="square"></div>
+<h3>fetch API</h3>s
+	<button type="button" id='mybtn' class="btn btn-primary">btn</button>
+	<button class="btn btn-primary">fetch data</button>
+<div id='content'></div>
+	
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<!-- FORM VALIDATION USING REGULAR EXPRESSION -->
+<h1>form validation</h1>
+
+<div id='success' class="alert alert-danger alert-dismissible fade" role='alert' >
+	<strong>success</strong>
+<button type='button' class="button" data-dismiss='alert' aria-label='close'>
+	<span aria-hidden='true'>&times;</span>
+</button>
+</div>
+
+
+<div id='failure' class="alert alert-danger alert-dismissible fade" role='alert' >
+	<strong>failure</strong>
+<button type='button' class="button" data-dismiss='alert' aria-label='close'>
+	<span aria-hidden='true'>&times;</span>
+</button>
+</div>
+
+
+
+<form>
+	<div class="form-group">
+    <label for="name">name</label>
+    <input type="text" class="form-control is-invalid" id="name" placeholder="name">
+    <div class='invalid-feedback'>this is wrong</div>
+
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="enter email">
+    <small id='email valid' class='form-text text-muted invalid-feedback'>your email</small>
+  </div>
+
+
+  <div class="form-group">
+    <label for="enter">car</label>
+    <select class="form-control" id="enter">
+      <option>car1</option>
+      <option>car2</option>
+      <option>car3</option>
+      <option>car4</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="add">Enter address</label>
+    	<textarea class='form-control' id="address" rows="3"></textarea>
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">phone</label>
+    <input class="form-control" id="phone" rows="3"></textarea>
+  </div>
+
+
+  <button id='submit' class="btn btn-primary" type="submit">submit</button>
+</form>
+<div class="alert alert-primary" role="alert">
+  submitted!
+</div>
+</form>
+<script type="text/javascript" src="advancejs.js"></script>
+</body>
+</html>  

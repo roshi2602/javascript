@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!-- ye wala font awesome cdn js.com se copy kia hai -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css'>  
+    <link rel="stylesheet" type='text/css' href='shoppingcart.css'>
+    <title>shopping website!</title>
+    
+  </head>
+  <!-- body aur header me font awesome wali link usee ki hai kuki cart me +- krne ke lie -->
+  <body>
+   
+    <!-- badge from bootstrap -->
+    <h1>Flipkart <span class="badge badge-secondary">cart</span></h1>
+    <hr>
+
+<div class='container'>
+  <div class='row'>
+<div class="col-md-10 col-11 mx-auto ">
+  <!-- md =median devices -->
+  <div class="row mt-5 gx-4">
+    <!-- mt=margin top -->
+<!-- div me gx horizontally aur vertical ke beach me space pane ke lie krte hai  -->
+<div class='col-md-12 col-lg-8 mx-auto main_cart mb-lg-0 mb-5'>
+
+  <!-- mb=margin bottom lg(large) 0 ya usse upar -->
+<div class="card p-4">
+  <!-- all 4 directions se padding chaiye islie p-4 -->
+  <h2 class="py-4 font-weight-bold">my cart</h2>
+  <!-- py=padding -->
+
+  <div class="row">
+    <div class="col-md-5 col-5 mx-auto bg-light shadow product_img ">
+      <!-- shadow zarur lagana -->
+      <!-- d-flex -display flex -->
+      
+  
+      <img src="shirtimage.jpg" class ='img-fluid' alt="shirt">
+    </div>
+
+     
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+      
+<div class="row">
+
+<div class="col-6 card-title">
+  <h1 class='mb-4 product_name'>clothes</h1> 
+  <!-- mb=margin bottom -->
+  <p class="mb-2">shirt</p>
+  <p class="mb-3">size-L</p>
+</div>
+
+<!-- bootstrap4 se pagination se copy kia hai -->
+<div class="col-6"></div>
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-link" onclick="decreaseNumber()"><i class="fas fa-minus"></i></button></li>
+  <!-- i class wala fontawesome.com me minus se lia hai -->
+  <!-- onclick dia hai apne se -->
+
+  <li class="page-item"><input type='text' name='' class='page-link value='1' id='textbox'></li>
+  <!-- id=textbox di hai -->
+  <li class="page-item"><button class="page-link" onclick="increaseNumber()"><i class="fas fa-plus"></i></button></li>
+  <!--onclick dia hai apne se  -->
+</ul>
+</div>
+<div class="row">
+  <div class="col-8 d-flex">
+    <p><i class="fas fa-trash-alt"></i>remove item</p>
+    <!-- delete bin lane ke lie  -->
+    <br>
+    <p><i class="fas fa-heart"></i>move wishlist</p>
+    <!-- heart lane ke lie -->
+
+  <div class="col-4 d-flex">
+    <h3>$<span id="item">0.00</span></h3>
+    <!-- span hum cart ki quantity ke sath uski price badhane ke lie shoppingcart.js me inner html lagane ke lie use kar rahe hai jisse uski quantity badhi to price bhi change ho jaegi  -->
+  </div>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<hr>
+<!-- ek bar pura upar ka dusri image ke lie fir se copy krdo -->
+
+
+
+  <div class="row">
+    <div class="col-md-5 col-11 mx-auto bg-light shadow product_img ">
+      <!-- shadow zarur lagana -->
+      <!-- d-flex -display flex -->
+      
+  
+      <img src="jeansimage.jpg" class ='img-fluid' alt="jeans">
+    </div>
+
+     
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+      
+<div class="row">
+
+<div class="col-6 card-title">
+  <!-- mb=margin bottom -->
+  <p class="mb-2">jeans</p>
+  <p class="mb-3">size-L</p>
+</div>
+
+<!-- bootstrap4 se pagination se copy kia hai -->
+<div class="col-6"></div>
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-link" onclick="decreaseNumber1()"><i class="fas fa-minus"></i></button>
+  <!-- i class wala fontawesome.com me minus se lia hai -->
+  <!-- onclick dia hai apne se -->
+    </li>
+  <li class="page-item"><input type='text' name='' class='page-link' value='1' id='textbox1'></li>
+  <!-- id=textbox di hai -->
+  <li class="page-item"><button class="page-link" onclick="increaseNumber1()"><i class="fas fa-plus"></i></button></li>
+  <!--onclick dia hai apne se  -->
+</ul>
+</div>
+<div class="row">
+  <div class="col-8 d-flex">
+    <p><i class="fas fa-trash-alt"></i>remove item</p>
+    <!-- delete bin lane ke lie  -->
+    <p><i class="fas fa-heart"></i>move wishlist</p>
+    <!-- heart lane ke lie -->
+
+  <div class="col-4 d-flex">
+    <h3>$<span id="item1">0.00</span></h3>
+<!-- span hum inner html lagane ke lie de rahe hai isse product ki price aaegi cart ki quantity ke hisab se -->
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 col-lg">
+  <div class="right_side p-3 shadow bg-white">
+    
+    <div class='price d-flex justify-content-between'>
+      <p>product_amount</p>
+      <p>$<span id='amount'>0.00</span></p>
+      <!--span hum price calculate krne ke lie le rahe hai ye hum js me use krenge   -->
+
+    </div>
+      <div class='price d-flex justify-content-between'>
+      <p>shipping charge</p>
+      <p>$<span id='shipping'>50.00</span></p>
+      </div>  
+      <!--span hum price calculate krne ke lie le rahe hai ye hum js me use krenge   -->
+<hr>
+<div class="total_price d-flex justify-content-between font-weight-bold">
+<p>total amount</p>
+<p>$<span id='total_price'>0.00</span></p>
+</div>
+<button class="btn btn-primary">check out</button>
+</div>
+<div class="discount mt-3 shadow">
+  <div class="card">
+    <div class="card-body">
+      <div class="col-md-6 text-right">
+        <!-- coupon wala google se copy kia hai -->
+        <form>
+          <div class="form-group"> <label>Have coupon?</label>
+            <!-- next line coupon agar galat dala to error throw krne ke lie , ye hum javascript me code me use krenge -->
+            <small id='error'></small>
+              <div class="input-group"> <input type="text" class="form-control coupon" name="" placeholder="Coupon code" id='discount_code'> <span class="coupon">
+                <button class="btn btn-primary btn-apply coupon" onclick="discount()">Apply</button></span> </div>
+       <!-- jab bhi koi apply pe click krega to usme function discount() chalega in javascript -->
+            </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+</div>
+<!-- delivery date dene ke lie div -->
+<div class="mt-3 shadow p-3 bg-white">
+  <div>
+    <h5>expected delivery date</h5>
+    <p>feb 19-feb 26</p>
+  </div>
+
+</div>
+</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+    <script type='text/javascript' src='shopping cart.js'></script>
+  </body>
+</html>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+  
+    <header id="header" class="headersec">one
+        <h1>vandana</h1>
+<div class="container">
+    <h1>this is dom</h1>
+    <p>my name is</p>
+    <p>dubey</p>
+</div>
+<div class='container'>
+    <h2>we are good</h2>
+    <table>
+        <tr>
+            <td>car</td>
+            <td>mar</td>
+            <td>sar</td>
+        </tr>
+    </table>
+<a class="btn btn-info" onclick="changeBackground()">show this</a>
+<br>
+<button class="btn btn-danger">button</button>
+</div>
+</header>
+    <section id='articles'>two
+        <h2>roshi dubey</h2>
+
+        <a href="www.google.com" class='btn btn-info'>read</a>
+        <div class="container">
+            <div class="row">
+                <div class='bg'>
+                    <h1>articles</h1>   
+                    <p>created para</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id='flower'>three
+
+        <div class='container'>
+
+        <div class='row'>
+
+            <div class='col-2'>pink</div>
+            <div class='col-2'>yellow</div>
+
+
+            <form id='form' action="">
+                <input type="text" class="form-control bg-warning">
+            </form>
+        </div>
+</div>
+
+    </section>
+    <section id='forms'>four
+        <a href="www.google.com" class='btn btn-info'>share</a>
+    </section>
+    <div class='gparent'>
+<div class='parent'>
+    <div class='child'>
+
+    </div>
+
+</div>
+    </div>
+    <style>
+        .gparent,.parent,.child{
+            border: 2px solid black;
+            padding: 40px;
+            margin: auto;
+            max-width: 500px;
+
+        }
+    </style>
+    <script>
+let header=document.getElementById('header');
+let sh=header.getElementsByTagName('p')
+console.log(sh);
+
+
+let articles=document.getElementById('.articles');
+console.log(articles)
+
+let heade=document.getElementById('header');
+let she=heade.getElementsByTagName('p')[0];
+console.log(she);
+
+
+let hed=document.getElementById('header')
+let ok=hed.getElementsByClassName('container')[1];  //index particular find out krne ke lie
+console.log(ok);
+
+let go=document.querySelector('.headersec'); //ye element nikal dega
+console.log(go);
+
+let so=document.querySelectorAll('.container p');  //ye puri list de dega
+console.log(so);
+
+
+//6)webpage properties
+let doc=document.all;  //ye complete html collection dega
+console.log(doc);
+
+let doc1=document.head;   //ye head aur USKE ander ke elements dega
+console.log(doc1);
+
+let doc2=document.baseURI;
+console.log(doc2);
+//output=http://127.0.0.1:5500/DOM.html
+
+
+//7)get dom value
+let doe=document.querySelector('header').innerText; //ye header ke ander ka pura text de dega 
+console.log(doe);
+
+
+let does=document.querySelector('header').innerHTML; //ye header ke ander sare html ke tags de dega
+console.log(does);
+
+let doing=document.querySelector('header').getAttribute('class');   //ye class ka naam jo header me hai vo deta hai
+console.log(doing);
+
+//output=headersec
+
+let doingg=document.querySelector('header').getAttributeNode('id'); //ye id ka naam dega
+console.log(doingg);
+
+//output=id='header'
+
+let doin=document.querySelector('header').attributes['class'].value;  //header ke class ki value dedo
+console.log(doin);
+//output=>'headersec'
+
+let ko=document.querySelector('#articles a').attributes['href'].value; //articles ke a tag me href ki value dedo
+console.log(ko); 
+//output=>  image2.jpeg';
+
+//8)set dom value
+
+let h =document.querySelector('#header .container');
+h.innerText='<h1>gkl</h1>';  
+console.log(h);
+//output=<header id="header" class="headersec">gkl</header>
+
+//set attribute
+let hi =document.querySelector('#articles a'); //output=<a href="www.google.com">read</a>
+//mujhe google.com change karna hai ab
+hi.setAttribute('href','www.gmail.com');
+console.log(hi);
+//output=<a href="www.gmail.com">read</a>
+
+
+//another ex of set attribute value
+let ho =document.querySelector('#articles a');
+let a =ho.attributes[0].value='www.yahoo.com';
+console.log(a);
+//google.com se yahoo.com change ho gaya
+//output= <a href=​"www.yahoo.com" class=​"btn btn-info">​read​</a>​
+          // www.yahoo.com
+
+
+//another ex of set attribute -remove attribute
+let hp =document.querySelector('#articles a');
+hp.removeAttribute('class');  //class hata dega ye tag me se
+console.log(hp);
+//output=<a href="www.yahoo.com">read</a>
+
+
+
+//9)style dom property
+
+let co=document.querySelector('header div');
+co.style.backgroundColor='red';
+co.style.paddingTop='2px';
+co.style.color='green';
+console.log(co);
+//output=h1 ke upar background color red, aur text green color ka ho jaega
+
+//another ex
+let cc=document.querySelectorAll('a');
+//loop use krenge to apply to all
+cc.forEach(function(data){
+    data.style.backgroundColor='pink';
+    data.style.color='blue';
+});
+console.log(cc);
+//forEach se sabhi <a> tag pe background color pink lag jaega
+
+
+//10)className
+ let jo=document.querySelector('header');
+ let b=jo.className ='headersec bg-danger'; //class ka naam add karo
+ console.log(jo);
+
+
+//another ex
+
+let op=document.querySelectorAll('header td');
+console.log(op);
+op.forEach(function(data){
+    console.log(data);
+    data.className='td bg-warning';
+});
+//ye <td> me class= bg-warning de dega
+
+
+
+//11)classList
+ let f=document.querySelector('header').classList;
+ f.add('bg-dark'); //isse apply
+ //f.remove('bg-dark'); //isse remove
+ f.replace('bg-dark','bg-warning');
+
+ let j=f.length;
+ console.log(j);   //output=3
+console.log(f);     //output=DOMTokenList(2) ["headersec", "bg-danger", value: "headersec bg-danger"]
+console.log(f.item(1));   //ye item ka method dega //output=bg-danger
+
+
+//another ex
+
+const ch= function(){
+    let ff=document.querySelector('form input').classList;
+    ff.toggle('bg-warning');  //toggle means add karo ya remove karo function pe
+
+console.log(ff);
+}
+
+
+//12)addEventListener
+//issse <a> tag me <header>me click krke color change hoga
+let hh=document.querySelector('header');
+let bt=document.querySelector('header a');
+const changeBackground=()=>{  //function changeBackground upar <a> TAG me daal dia hai
+    hh.style.backgroundColor='orange';
+}
+/*1 st method*/
+//bt.onclick=changeBackground;   //simply function ka naam likh dia
+
+/*2 nd method*/
+bt.addEventListener('click',changeBackground);//addEvent me 3 parameters hote hai -first for event, second for function,third for true or false
+
+
+
+
+
+//13)event bubbling and event capturing
+let h1=document.querySelector('header h1');
+const changeTextColor= () =>{
+    h1.style.color='purple';
+}
+//bt.onclick=cho;
+bt.addEventListener('click',changeTextColor);
+
+//console.log(h1);
+//output-h1 purple color ka text dega
+
+
+//another ex of event bubbling
+//upar css aur div me gparent,parent,child lagaya hai
+let grand=document.querySelector('.gparent');
+let par=document.querySelector('.parent');
+let child=document.querySelector('.child');
+
+par.addEventListener('click',function(){
+    console.log('grandparent');
+
+},true)
+par.addEventListener('click',function(){
+    console.log('parent');
+
+},true) //true for event capturing
+child.addEventListener('click',function(){
+    console.log('parent');
+
+},true)
+//output=boxes pe click karo
+
+
+
+
+//14)remove event listener
+let yo=document.querySelector('header');
+let buttn=document.querySelector('header a');
+const remove=document.querySelector('header button');
+
+const changeBackgroun=()=>{
+header.style.backgroundColor='green';
+}
+const removeBackground=()=>{
+    header.style.backgroundColor='yellow';
+}
+
+   // buttn.style.backgroundColor='blue';
+    buttn.addEventListener('click',changeBackgroun);
+
+    remove.addEventListener('click',removeBackground);
+    
+//output=show this button click kro to add event hoga means color change hoge
+//remove addeventlistener karo to remove hoga color and will change to yellow
+
+
+
+
+//15)parent element and parent node
+//parent element
+let article=document.querySelector('#articles h1');
+let back=article.parentElement.style.backgroundColor='pink';
+console.log(back);
+
+
+
+//parent node
+let art=document.querySelector('#articles');
+let bck=art.parentNode;
+console.log(bck);
+
+//parent node means articles ka parent kaun hai i.e. body hai
+
+
+
+
+//16)children and childNodes
+let fo=document.querySelector('#articles .row');
+let find=fo.children[0].style.backgroundColor='purple';
+
+console.log(find);
+
+//childNodes
+
+let lo=document.querySelector('#articles .row');
+let fi=lo.childNodes;  //child node ek text node hai aur vo text,comments ,div return karega 
+
+console.log(fi);
+//output=NodeList(3) [text, div.bg, text]
+
+
+
+//17)firstChild, firstElementChid, lastChild, LastElementChild
+let hoe=document.querySelector('#articles .row .bg');
+let went=hoe.firstElementChild.style.backgroundColor='brown'; //bg ke ander ka first element child is <h1></h1>
+console.log(hoe);
+//output=<div class="bg" style="background-color: purple;">
+  //  <h1 style="background-color: brown;">articles</h1>   
+    //            </div>
+
+
+
+let hoee=document.querySelector('#articles .row .bg');
+let doq=hoee.lastElementChild;
+console.log(doq);
+//output=<h1 style="background-color: brown;">articles</h1>
+//firstElementChild and lastElementChild simply aapko html ke tags nikal ke deta hai
+
+//18)nextSibling, nextElementSibling,previousSibling,previousElementSibling
+let flower=document.querySelector('#flower .container .row .col-2:nth-child(1)'); //nth-child css se
+let aa=flower.nextElementSibling;
+aa.style.border='1px solid red';
+console.log(flower);
+//ye next element pe lagega
+
+
+//19)appendChild,createElement,createTextNode,createComment
+let hr=document.createElement('h3'); //h3 create ho jaega
+let tex=document.createTextNode('this is text node'); //ye text create karega,,//ye text console aur server par bhi dikhega
+let com=document.createComment('this is comment');
+hr.appendChild(tex);  //output=<h3>this is text node</h3>
+
+
+console.log(hr);     //<h3></h3>
+console.log(tex);  //this is text node
+console.log(com);  //output=<!--this is comment-->
+
+
+let col=document.querySelector('#flower .col-2');
+console.log(col);
+col.appendChild(hr);
+
+
+//20)insertBefore
+let cos=document.querySelector('#flower .col-2');
+console.log(cos);
+let h4=document.createElement('h4');
+let tt=document.createTextNode('flowersss');  //ye text console aur server par bhi dikhega
+h4.appendChild(tt); //h4 tag ke ander text dalne ke lie appendChild
+cos.appendChild(h4);
+console.log(h4);
+cos.insertBefore(h4,cos.children[0]);  //isme 2 parameters hote hai ek, aapko kya insert krna hai. do, aapko kaha karna hai
+ //isse element me dekho ,ye h4 h3 ke pehle aa jaega
+
+
+
+
+ //21)insertAdjacent methods
+
+ //4 methods hoti hai-beforeend,afterend,beforebegin,afterbegin
+ /*
+ let h5=document.createElement('h5');
+ let textt=document.createTextNode('text is created');
+ h5.appendChild(textt);
+ //console.log(h5);
+ */
+let bg=document.querySelector('#articles .bg');
+console.log(bg);
+bg.style.backgroundColor='blue';
+/*  bg.insertAdjacentElement('afterbegin',h5)   
+*/
+
+  //isko position batana padta hai and kaunsa element rakhna hai 
+//output=articles ke upar textnode blue color me aa jaega
+
+
+
+//insert adjacentHTML
+/*
+let h5='<h5>insert text here</h5>'
+bg.insertAdjacentHTML('afterend',h5);
+console.log(h5);
+*/
+//ye articles ke neeche aa jaega server pe plus console pe<h5>insert text here</h5>
+
+
+//insertAdjacentText
+/*
+let h5='please insert';
+bg.insertAdjacentText('afterend',h5);
+console.log(h5);
+*/
+//articles ke neeche text please insert text aa jaega server pe
+
+//InsertadjacentElement
+let h11= document.querySelector('#articles h1');
+console.log(h11);
+
+let p=document.querySelector('#articles p');
+bg.insertAdjacentElement('beforeend',p);
+console.log(h11);
+
+//articles ke neeche para aa jaega
+
+
+
+
+
+</script>
+</body>
+</html>

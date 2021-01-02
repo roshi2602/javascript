@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+<meta charset="utf-8">
+<meta name="description" content="this is">
+<link rel="stylesheet" a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+		#one{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+ 			
+
+ 		}
+ 		#two{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+ 			background-clip:padding-box;
+
+ 		}
+
+ 		#three{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+ 			background-clip:content-box;
+
+ 		}
+ 		#grad1{
+ 			height:200px;
+ 			background-color:red;
+ 			background-image:radial-gradient(circle ,green,red , yellow );
+ 		}
+ 		/*
+ 		h2{
+ 			text-shadow:2px 4px 2px;
+ 			color:yellow;
+ 		}
+ 		*/
+ 		h2{
+ 			box-shadow:5px 5px 5px;
+ 			color:pink;
+ 			background-color:yellow;
+ 			width:200px;
+ 			height:200px;
+ 			padding:15px;
+ 		}
+ 		.test2{
+ 			width:200px;
+ 			border:2px solid black;
+ 			word-wrap:break-word;
+
+ 		}
+ 		/*
+ 		.test1{
+ 			writing-mode:vertical-rl;
+ 		}
+ 		*/	
+ 		h3{
+ 			width:300px;
+ 			height:100px;
+ 			background-color:yellow;
+ 			border:2px solid blue;
+ 			-ms-transform:rotate(50deg);
+ 			transform:rotate(50deg);
+ 		}
+ 		h2 .test1{
+ 			transform:rotate(90deg);
+ 		}
+ 		div{
+ 			width:100px;
+ 			height:100px;
+ 			background-color:red;
+ 			animation-name:exam;
+ 			animation-duration:3s;
+ 			animation-iteration-count:3;
+ 			animation-direction:reverse;
+ 		/*	background:red;
+ 			transition:width 2s, height 4s;
+ 			*/
+ 		}
+ 		/*
+ 		div:hover{
+ 			width:300px;
+ 			height:300px;
+ 		}
+ 		*/
+ 		@keyframes exam{
+ 			from {background-color:red;}
+ 			to {background-color:yellow;}
+
+ 		}
+ 		.tooltip{
+ 			position:relative;
+ 			display:inline-block;
+ 			border:2px solid black;
+ 		}
+ 		.tooltip .tooltiptext{
+ 			background-color:black;
+ 			visibility:hidden;
+ 			color:green;
+ 			text-align:center;
+ 			border-radius:3px;
+ 			padding:5px;
+ 		}
+ 		.tooltip:hover .tooltiptext{
+ 			visibility:visible;
+ 		}
+ 		img{
+ 			height:200px;
+ 			width:200px;
+ 			object-fit:cover;
+ 		}
+ 		.blur{
+ 			filter:blur(4px);
+ 		}
+ 		.greyscale{
+ 			filter:grayscale(100%);
+ 		}
+ 		.button1{
+ 			padding:12px 20px;
+ 			margin:4px;
+
+ 		
+ 		}
+
+ 		.pagination{
+ 			display:inline-block;
+ 		}
+
+ 		.pagination a{
+ 			color:black;
+ 			float:left;
+ 			padding:20px 10px ;
+ 			border:2px  solid black;
+ 			margin:4px;
+
+ 		}
+ 	ul	.breadcrumb{
+ 		padding:15px;
+ 		list-style:none;
+ 		background-color:pink;
+ 		border:2px solid black;
+ 	}
+ 	li{
+ 		display:inline;
+ 	}
+ 	li a{
+ 		color:green;
+ 	}
+.newspaper{
+
+	column-count:1;
+	column-gap:40px;
+	column-rule-style:solid;
+	column-fill:auto;
+}
+.container{
+	color:var(--blue);
+	background-color:var(--pink);
+	border:2px solid black;
+}
+p{
+	color:var(--green);
+}
+@media screen and (min-width:200px) {
+body{
+	background-color:lightgreen;
+
+}
+}
+.flex-container{
+	display:flex;
+	flex-direction:column;
+	background-color:blue;
+	flex-wrap:wrap;
+}
+.flex-container > div{
+	background-color:pink;
+	text-align:center;
+	width:100px;
+	font-size:20px;
+	line-height:75px;
+	margin:10px;
+}
+.grid-container{
+		display:grid;
+		background-color:green;
+		padding:10px;
+		grid-template-columns:auto auto auto;
+		grid-column-gap:50px;
+		justify-content:center;
+}
+.grid-item{
+	background-color:rgba(200,200,200,0.8);
+	border:2px solid black;
+	padding:20px;
+	font-size:20px;
+	text-align:center;
+	
+
+}
+.item1{
+	grid-column:3;
+	grid-row:1/ span 2
+}
+</style>
+</head>
+<body>
+	<div id="one">
+	<h1>no background clip</h1>
+		<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+
+<div id="two">
+	<h2>using padding box</h2>
+	<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+
+<div id="three">
+	<h3>content box</h3>
+	<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+<br>
+<div id='grad1'>
+	<h1>hello</h1>
+</div>
+<h2>hello everyone</h2>
+<h2 class='test1'>text overflow</h2>
+<h3 class='test2'>text ovverflowing This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</h3>
+<br><br><br>
+<div>ok</div>
+<br><br>
+<h1>tooltip</h1>
+<div class='tooltip'>over me
+	<span class='tooltiptext'>tooltiptext</span>
+</div>
+<br><br>
+<h1>images</h1>
+<img src="file:///E:/blog5.jpg">
+<img class='blur' src="file:///E:/blog5.jpg" width='300' height='300'>
+<img class='grayscale' src="file:///E:/blog5.jpg">
+<br><br>
+<button class='button1'>button</button>
+<br>
+<div class='pagination'>
+	<a href='#'>1</a>
+	<a href='#'>2</a>
+
+</div>
+<ul class='breadcrumb'>
+	<li><a href='#'>home</a></li>
+	<li><a href='#'>next</a></li>
+</ul>
+<br><br>
+
+<div class="newspaper">
+The column-span property specifies how many columns an element should span across.
+
+The following example specifies that the element should span across all columns
+</div>
+<br><br>
+<div class='container'>
+<p>The column-span property specifies how many columns an element should span across.
+The following example specifies that the element should span across all columns</p>
+<br><br><br>
+<div class='flex-container'>
+	<h1>1</h1>
+	<h1>2</h1>
+	<h1>3</h1>
+</div>
+<div class='grid-container'>
+	<div class='grid-item item1'>1</div>
+	<div class='grid-item'>2</div>
+	  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>  
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>
+</body>
+</html>

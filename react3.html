@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+<meta charset="utf-8">
+<meta name="description" content="this is">
+<link rel="stylesheet" a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+		body{
+	
+			opacity:0.5;
+			background-image:url('desktop/image2.jpeg');
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			border-style:dotted;
+			border-width: 20px 5px;
+			border-color:green;
+			border-radius:5px;
+
+
+		}
+		h1{
+			color:white;
+			text-align:center;
+			margin-top:100px;
+			margin-bottom:100px;
+			margin-left:inherit;
+			padding-left:50px;
+			padding-top:50px;
+			height:200px;
+			width:200px;
+			outline-style:groove;
+			outline-width:10px;
+			outline-color:pink;
+			outline-offset:15px;
+			outline-offset:15px;
+			text-shadow:2px 2px;
+		}
+	 #para1{
+			font-size:20px;
+			font-family:verdana;
+			color:yellow;
+			direction:rt1;
+			unicode-bidi:bidi-override;
+		}
+		.center{
+			color:green;
+		}
+		/*{
+			text-align:center;
+			background-color:blue;
+		}*/
+		h2{
+			color:black; /* set this */
+			border:20px solid blue;
+			width:300px;
+			padding:10px;
+			margin:0;
+			outline:1px solid red;
+			outline-offset:15px;
+			text-align:center;
+			text-decoration:overline;
+			text-transform:uppercase;
+			letter-spacing:3px;
+		}
+		div.sticky {
+			position:-webkit-sticky;
+			text-align:justify;
+			border:1px solid black;
+			color:black;
+			line-height:0.8;
+			word-spacing:10px;
+			font-family:Arial;
+			font-style:italic;
+			font-weight:normal;
+			font-variant:small-caps;
+			max-width:500px;
+			overflow:visible;
+
+		}
+		img.top{
+ 			vertical-align:top;
+ 			z-index:-1;
+ 			position:absolute;
+ 			float:right;
+ 		}
+ 		a: visited{
+ 			color:green;
+ 			text-decoration:underline;
+ 		}
+ 		ul.a{
+ 			list-style-position:outside;
+
+ 		}
+
+ 		ul.b{
+ 			list-style-position:inside;
+ 		}
+ 		table,th,td{
+ 			border:1px solid black;
+ 			border-collapse:collapse;
+ 			padding:15px;
+ 		}
+ 		table.x{
+ 			border-collapse:collapse;
+ 			width:100%;
+ 			table-layout:fixed;
+ 		}
+ 		tr:nth-child(even) {background-color:pink;}
+ 		div{
+ 			border:1px solid black;
+ 			overflow:auto;
+ 			width:200px;
+ 			height:50px;
+ 		}
+ 		*{
+ 			box-sizing:border-box;
+ 		}
+ 		.flex-container .box{
+ 			float:left;
+ 			width:30%;
+ 			padding:50px;
+ 		}
+ 		.clearfix::after{
+ 			content:'';
+ 			clear:both;
+ 			display:table;
+ 		}
+ 		.flex-container{
+ 			display:flex;
+ 			flex-wrap:nowrap;
+ 			background-color:blue;
+ 		}
+ 		span.b{
+ 			display:inline;
+ 			width:100px;
+ 			height:100px;
+ 			padding:5px;
+ 			border:1px solid black;
+ 			background-color:yellow;
+ 		}
+ 		span.c{
+ 			display:block;
+ 			width:100px;
+ 			height:100px;
+ 			padding:5px;
+ 			border:1px solid black;
+ 			background-color:blue;
+ 		}
+ 		span.d{
+ 			display:inline-block;
+ 			width:100px;
+ 			height:100px;
+ 			padding:5px;
+ 			border:1px solid black;
+ 			background-color:green;
+ 		}
+ 		.center{
+ 			margin:auto;
+ 			width:100px;
+ 			border:2px solid black;
+ 		}
+ 		div + p{
+ 			background-color:yellow;
+ 		}
+ 		a:link{
+ 			color:red;
+
+ 		}
+ 		a:visited{
+ 			color:green;
+ 		}
+ 		a:hover{
+ 			color:yellow;
+ 		}
+ 		a:active{
+ 			color:blue;
+ 		}
+
+ 		p i:first-child{
+ 			color:green;
+
+ 		}
+ 		q:lang(ok){
+ 			quotes:"~" "~";
+ 		}
+
+ 		p :last-child{
+ 			color:yellow;
+ 		}
+
+ 	/*root{
+ 			background:#ff0000;
+ 		}
+ 		*/
+ 		input:valid{
+ 			background-color:yellow;
+ 		}
+ 		::selection{
+ 			color:red;
+ 			background:yellow;
+ 		}
+
+ 		ul{
+ 			list-style-type:none;
+ 			margin:0;
+ 			padding:0;
+ 			position:-webkit-sticky;
+ 			position:sticky;
+
+ 		}
+ 		li{
+ 			float:left;
+ 		}
+
+ 		li:last-child{
+ 			border-right:none;
+ 		}
+ 	 a{
+ 		display:block;
+ 		background-color:pink;
+ 		padding:8px;
+
+
+ 		}
+
+ 		.dropdown{
+ 			position:relative;
+ 			display:inline-block;
+ 		}
+ 		.dropdown-content{
+ 			display:none;
+ 			position:absolute;
+ 			background-color:yellow;
+ 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 			padding:12px 16px;
+ 			z-index:1;
+ 		}
+
+ 		.dropdown:hover  .dropdown-content{
+ 			display:block;
+ 		}
+ 		.gallery{
+ 			width:100%;
+ 			height:auto;
+ 		}
+ 		#one{
+ 			background-image:url('file:///E:/blog5.jpg');
+
+
+ 		}
+ 		#two{
+ 		  ackground-image:url('file:///E:/blog5.jpg');
+ 		}
+
+ 		#navlist{
+ 			position:relative;
+
+ 		}
+ 		#navlist li{
+ 			margin:0;
+ 			padding:0;
+ 			list-style:none;
+ 			position:absolute;
+ 			top:0;
+ 		}
+
+ 		.relative{
+ 			position:relative;
+ 			left:30px;
+ 			border:2px solid black;
+ 		}
+
+ 		.static{
+ 			position:static;
+ 			border:2px solid red;
+ 		}
+ 		.fixed{
+ 			position:fixed;
+ 			border:2px solid yellow;
+
+ 		}
+ 		.sticky{
+ 			position:-webkit-sticky;
+ 			position:sticky;
+ 			top:0;
+ 			padding:5px;
+ 		}
+ 		a[target=_blank] {
+ 			background-color:yellow;
+ 		}
+ 		a[title~=word] {
+ 			border:5px solid yellow;
+
+ 		}
+ 		[class*="te"] {
+ 			background:pink;
+ 		}
+ 		input [type=text]:focus {
+ 			width:100%;
+ 			padding:12px 20px;
+ 			margin:8px 0;
+ 			box-sizing:border-box;
+ 			border:2px;
+ 			border-radius:4px;
+ 			color:white;
+ 			background-color:green;
+ 			transition:width 0.4s ease-in-out;
+
+
+ 		}
+ 		textarea{
+ 			width:100px;
+ 			height:100px;
+ 			padding:20px 10px;
+ 			box-sizing:border-box;
+ 			font-size:10px;
+ 			background-color:yellow;
+ 		}
+ 		select{
+ 			border-radius:4px;
+ 			padding:2px 4px;
+ 			background-color:orange;
+ 		}
+ 		input[type=button] {
+ 			background-color:yellow;
+ 			color:white;
+ 			padding:2px 4px;
+ 			cursor:pointer;
+
+ 		}
+ 		body{
+ 			counter-reset:section;
+ 		}
+ 		.header{
+ 			background-color:pink;
+ 			padding:200px;
+ 			text-align:center;
+ 		}
+ 		.topnav{
+ 			background-color:red;
+ 		
+ 		}
+ 		
+ 		.topnav a{
+ 			float:left;
+ 			display:block;
+ 			color:pink;
+ 			text-align:center;
+ 			padding:20px 40px;
+
+ 		}
+ 		.topnav a:hover{
+ 			background-color:black;
+ 			color:yellow;
+ 		}
+ 		.column{
+ 			float:left;
+ 			width:100%;
+ 			padding:150px;
+ 		}
+ 		.row{
+ 			content:"";
+ 			display:table;
+
+ 		}
+ 		@media screen and (max-width:600px){
+ 			.column{
+ 				width:100%;
+ 			}
+ 		}
+ 		.ex{
+ 			border-radius:25px 10px 15px 10px;
+ 			width:200px;
+ 			height:200px;
+ 			background:yellow;
+ 		}
+ 		#borderimg{
+ 			border:20px solid transparent;
+ 			padding:15px;
+ 			border-image:url('file:///E:/blog5.jpg');
+ 			border-image-slice:30;
+ 			border-image-width:10px;
+ 			border-image-outset:10px;
+ 			border-image-repeat:repeat;
+ 			background-size:contain;
+ 		}
+ 		.hero-image{
+ 			background:url('file:///E:/blog5.jpg');
+ 			position:relative;
+ 			background-size:cover;
+
+ 		}
+
+ 		.hero-text{
+ 			text-align:center;
+ 			position:absolute;
+ 			left:50%;
+ 			right:50%;
+ 		}
+
+ 		#one{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+
+ 		}
+ 		#two{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+ 			background-clip:padding-box;
+
+ 		}
+
+ 		#three{
+ 			border:2px solid black;
+ 			padding:15px;
+ 			background:yellow;
+ 			background-clip:content-box;
+ 		}
+
+
+
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<p>roshi<a href='react' title='word'>google</a>
+
+	<p>colors</p>
+	<i class='fas fa-cloud' style='font-size:24px;'></i>
+	<i class='glyphicon glyphicon-cloud'></i>
+<h1 style ='border:2px solid Tomato;'>welcome</h1>
+<h2>downup</h2>
+<p id="para1">we are all</p>
+<p class="center">everyone</p>
+<div>
+In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
+</div>
+<p>an <img class="top" src="file:///E:/blog5.jpg" alt ="image"> image with default</p>
+<ul class="a">
+	<li>one</li>
+	<li>two</li>
+</ul>
+<ul class="b">
+	<li>three</li>
+	<li>four</li>
+</ul>
+	<h3>table</h3>
+ 	<table class="x">
+ 		<div style="overflow-x:auto;">
+ 		<caption>we are</caption>
+ 		<thead>
+ 			<tr>
+ 				<th>name</th>
+ 				<th>place</th>
+ 			</tr>
+ 		</thead>
+ 		<tbody>
+ 			<tr>
+ 				<td>roshi</td>
+ 				<td>indore</td>
+ 			</tr>
+ 		</tbody>
+ 	</table>
+ </div>
+ <br><br>
+ <div class='flex-container'>
+<div class="box">
+	You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.
+</div>
+<br><br>
+<div class="clearfix">
+  <div class="box" style="background-color:#bbb">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box" style="background-color:#ccc">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box" style="background-color:#ddd">
+  <p>Some text inside the box.</p>
+  </div>
+</div>
+</div>
+<h1>display in line-Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.<span class="b">ONE</span></h1>
+<h2>display block-Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.<span class="c">TWO</span></h2>
+<h3>display inlineblock-Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.<span class="d">THREE</span></h3>
+<div class="center">
+	<p>hello world</p>
+</div>
+<p>adjacent selector</p>
+<br><br><br>
+<h2>CSS Links</h2>
+<br><br>
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p class="f"><i>this</i> is text</p>
+<p>this is sec text</p>
+<p>when did <q lang="ok">this happen</q></p>
+<h1>input email</h1>
+<input type="email" value="rosho@gmail.com">
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a href="#about">about</a></li>
+</ul>
+
+<h2>dropdown</h2>
+<div class="dropdown">
+	<span>mouse</span>
+	<div class="dropdown-content">
+	<p>helllo world</p>
+</div>
+</div>
+<div class="gallery">
+	<img src="file:///E:/blog5.jpg">
+	<ul id="navlist">
+		<li id="one"><a href="react.html"></a></li>
+		<li id="two"><a href="react2.html"></a></li>
+	</ul>
+	<br><br>
+	<div class="relative">
+	this is relative</div>
+<div class="static">
+	this is static
+</div>
+<div class="fixed">
+	this is fixed
+</div>
+<div class="sticky">
+	this is sticky
+</div>
+<a href='file:///C:/Users/USER/Desktop/react2.html' target="_blank">w3 school</a>
+<h1 class="top-text">welcome roshi</h1>
+<form>
+	<textarea>some text</textarea>
+	<select id="name" name="country">
+		<option value="fr"></option>
+		<option value="au"></option>
+	</select>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" value="roshi" placeholder="search">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="dubey">
+  <input type="button" value="button">
+</form>
+<h1>css</h1>
+<h1>html</h1>
+<h1>javascript</h1>
+<div class="header">
+	<h1>header</h1>
+</div>
+<div class="topnav">
+	<a href="#">one</a>
+	<a href="#">two</a>
+	<a href="#">three</a>
+	<div class="row">
+		<div class="column">
+			<h2>column</h2>
+				</div>
+				<div class='column'>
+					<h2>column2</h2>
+				</div>
+			</div>
+		</div>
+<br><br>
+<h1 class="ex">radius</h1>
+<h1>border image</h1>
+<p id='borderimg'>ok</p>
+<div class='hero-image'>
+	<div class='hero-text'>
+		<h1>i am roshi</h1>
+	</div>
+</div>
+</div>
+<br><br>
+
+<div id="one">
+	<h1>no background clip></h1>
+		<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+
+<div id="two">
+	<h2>using padding box</h2>
+	<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+
+<div id="three">
+	<h3>content box</h3>
+	<p>The CSS background-origin property specifies where the background image is positioned.
+
+The property takes three different values:
+
+border-box - the background image starts from the upper left corner of the border
+padding-box - (default) the background image starts from the upper left corner of the padding edge
+content-box - the background image starts from the upper left corner of the content</p>
+</div>
+</body>
+</html>
